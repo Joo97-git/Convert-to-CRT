@@ -103,8 +103,8 @@ function generateMask(w, h, res) {
 
             let colorIdx = (!isOddRow) ? ((col % 3) + 3) % 3 : (((col + 2) % 3) + 3) % 3;
 
-            if (colorIdx === 0) mCtx.fillStyle = `rgb(255,0,0)`;
-            else if (colorIdx === 1) mCtx.fillStyle = `rgb(0,255,0)`;
+            if (colorIdx === 0) mCtx.fillStyle = `rgb(180,0,0)`;
+            else if (colorIdx === 1) mCtx.fillStyle = `rgb(0,200,0)`;
             else mCtx.fillStyle = `rgb(0,0,255)`;
 
             mCtx.beginPath();
