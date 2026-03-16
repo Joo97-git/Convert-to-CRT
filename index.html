@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RETRO CRT CONVERTER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>RETRO CRT CONVERTER</h1></header>
+    
+    <main class="container">
+        <div class="left-panel">
+            <div id="dropZone" class="canvas-wrapper empty">
+                <input type="file" id="upload" accept="image/*" style="display: none;">
+                <canvas id="canvas"></canvas>
+                <div id="uploadPlaceholder" class="placeholder">
+                    Drag & Drop to Upload Image<br>or Click here
+                </div>
+                <div id="comparisonLine" style="display: none;"></div>
+            </div>
+            
+            <div id="splitSliderContainer" style="display: none;">
+                <input type="range" id="splitSlider" min="0" max="100" value="50">
+            </div>
+        </div>
+        
+        <aside class="controls">
+            <div class="control-group">
+                <label>Pixel Resolution: <span id="resVal">80</span></label>
+                <input type="range" id="dotRes" min="10" max="120" value="80">
+            </div>
+            
+            <div class="control-group">
+                <label>CRT Filter: <span id="scanVal">0.7</span></label>
+                <input type="range" id="scanline" min="0" max="100" value="70">
+            </div>
+            
+            <button id="downloadBtn" class="btn">Download Image</button>
+            <button id="viewOriginal" class="btn ghost">Hold to View Original</button>
+            <button id="resetBtn" class="btn icon-btn" title="Reset Image">↻</button>
+        </aside>
+    </main>
+    
+    <footer>© 2026 TERMINAL TOOLS</footer>
+    <script src="main.js"></script>
+</body>
+</html>
